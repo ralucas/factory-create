@@ -1,6 +1,6 @@
 #  [![Build Status](https://secure.travis-ci.org/ralucas/factory-create.png?branch=master)](http://travis-ci.org/ralucas/factory-create)
 
-> Utility function that is a factory for instantiating objects
+> Utility functions that can be used as a factory for instantiating objects
 
 
 ## Getting Started
@@ -8,30 +8,53 @@
 Install the module with: `npm install factory-create`
 
 ```js
-var factory-create = require('factory-create');
-factory-create.awesome(); // "awesome"
+var factory = require('factory-create');
 ```
-
-Install with cli command
-
-```sh
-$ npm install -g factory-create
-$ factory-create --help
-$ factory-create --version
-```
-
-
-
 
 ## Documentation
+There are 4 methods:
+* create -- This is basically a slight abstraction of the `Object.create` method in ES5:
 
-_(Coming soon)_
+```
+var instance = factory.create(Class, {
+  valueProp: { 
+    writable: true,  
+    configurable:true, 
+    value: 'myValue' 
+  },
+  dataProp: {
+    configurable:true, 
+    get: function() { 
+      return this.valueProp;
+    },
+    set: function(value) { 
+      this.valueProp = 'newValue'; 
+    }
+  }
+});
+```
 
+* createInstance -- Creates an instance from a relative file path
 
-## Examples
+```
+var instance = factory.createInstance('./classes/anotherClass.js', params); // returns instance with methods and properties
+```
 
-_(Coming soon)_
+* createInstances -- Creates instances from a collection of file paths, returns an object of instances
 
+```
+var instances = factory.createInstances(instancesObj, params);
+```
+
+* createFromIndex -- Creates instances from an `index.js` file for the current directory
+
+```
+var instance = factory.createFromIndex('./myCurrDir', params);
+
+or
+
+var instance = factory.createFromIndex(); // Assumes creation of instances all located in same directory as index.js
+```
 
 ## Contributing
 
