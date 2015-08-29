@@ -49,11 +49,8 @@ var instances = factory.createInstances(instancesObj, params);
 * createFromIndex -- Creates instances from an `index.js` file for the current directory
 
 ```
-var instance = factory.createFromIndex('./myCurrDir', params);
-
-or
-
 var instance = factory.createFromIndex(); // Assumes creation of instances all located in same directory as index.js
+module.exports = instance;
 ```
 
 ## Contributing
