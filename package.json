@@ -1,16 +1,14 @@
 {
   "name": "factory-create",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "lib/factory-create.js",
   "description": "Utility function that is a factory for instantiating objects",
-  
-      "homepage": "https://github.com/ralucas/factory-create",
-    
-    "bugs": "https://github.com/ralucas/factory-create/issues",
+  "homepage": "https://github.com/ralucas/factory-create",
+  "bugs": "https://github.com/ralucas/factory-create/issues",
   "author": {
     "name": "Richard A. Lucas",
-    "email": "richard@richardalucas.com"  ,
-        "url": "blog.richardalucas.com" 
+    "email": "richard@richardalucas.com",
+    "url": "blog.richardalucas.com"
   },
   "repository": {
     "type": "git",
@@ -21,8 +19,8 @@
     "lib"
   ],
   "keywords": [
-    "factory-create"  ,
-        "factory" 
+    "factory-create",
+    "factory"
   ],
   "devDependencies": {
     "grunt-contrib-jshint": "^0.10.0",
@@ -31,9 +29,13 @@
     "load-grunt-tasks": "^0.4.0",
     "time-grunt": "^0.3.1",
     "grunt-mocha-cli": "^1.9.0",
-    "jshint-stylish": "^0.2.0" 
+    "jshint-stylish": "^0.2.0"
   },
   "scripts": {
-    "test": "grunt" 
-  } 
+    "test": "grunt"
+  },
+  "dependencies": {
+    "glob": "^5.0.14",
+    "string": "^3.3.1"
+  }
 }
