@@ -1,6 +1,6 @@
 {
   "name": "factory-create",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "lib/factory-create.js",
   "description": "Utility function that is a factory for instantiating objects",
   "homepage": "https://github.com/ralucas/factory-create",
@@ -36,7 +36,7 @@
   },
   "dependencies": {
     "callsites": "^1.0.0",
-    "glob": "^5.0.14",
-    "string": "^3.3.1"
+    "camel-case": "^1.2.0",
+    "glob": "^5.0.14"
   }
 }
