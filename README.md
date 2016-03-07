@@ -48,6 +48,14 @@ var instances = factory.createInstances(instancesObj, params);
 
 * createFromIndex -- Creates instances from an `index.js` file for the current directory
 
+__Parameter__: 
+`options {object}` 
+  firstSplit {string} Gives the property name as the 
+    first split (i.e. redis-service.js has property redis)
+  params {object} Parameters to pass instance
+  instanceName {string} Pass a hash of options exclusive
+    to that instance
+
 ```
 var instance = factory.createFromIndex(); // Assumes creation of instances all located in same directory as index.js
 module.exports = instance;
